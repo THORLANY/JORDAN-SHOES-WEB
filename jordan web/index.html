@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Air Jordan X</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Anton', sans-serif;
+      background: #111;
+      color: white;
+      overflow-x: hidden;
+    }
+    header {
+      height: 100vh;
+      background: url("./images/download\ \(15\).jfif") no-repeat center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+    }
+    header h1, header p {
+      z-index: 1;
+      opacity: 0;
+    }
+    header h1 {
+      font-size: 4rem;
+      color: #fff;
+    }
+    header p {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+    }
+    section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 40px;
+    }
+    .card {
+      background: #222;
+      padding: 20px;
+      border-radius: 16px;
+      width: 300px;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(0) scale(1.05);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 12px;
+    }
+    .slider-section {
+      background: #000;
+      padding: 60px 20px;
+    }
+    .slider {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    .slider-images {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .slide {
+      min-width: 100%;
+      position: relative;
+    }
+    .slide img {
+      width: 100%;
+      border-radius: 20px;
+    }
+    .caption {
+      position: absolute;
+      bottom: 10px;
+      left: 20px;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    .slider-buttons {
+      margin-top: 20px;
+    }
+    .slider-buttons button {
+      background: #e53935;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      margin: 0 10px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .slider-buttons button:hover {
+      background: #e90505;
+    }
+    .purchase-section {
+      background: #1a1a1a;
+      padding: 60px 20px;
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    .purchase-btn {
+      background-color: #e53935;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .purchase-btn:hover {
+      background-color: #ff1e1e;
+    }
+    footer {
+      padding: 40px 20px;
+      text-align: center;
+      background: #111;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Air Jordan X</h1>
+    <p>Elevate Your Game</p>
+  </header>
+
+  <section>
+    <h2>Why Choose Jordan X?</h2>
+    <div class="features">
+      <div class="card">
+        <img src="./images/Air Jordan 1 Mid Yellow Toe Black 42.jfif" alt="Cushioning">
+        <h3>Ultimate Cushioning</h3>
+        <p>Responsive soles that give you an edge on every move.</p>
+      </div>
+      <div class="card">
+        <img src="./images/Jordan - Uomo_ Nike IT.jfif" alt="Design">
+        <h3>Signature Design</h3>
+        <p>Stand out on the street or court with iconic style.</p>
+      </div>
+      <div class="card">
+        <img src="./images/Jordan Tatum 2.jfif" alt="Grip">
+        <h3>Unmatched Grip</h3>
+        <p>Stay in control with pro-level traction technology.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slider-section">
+    <h2>Gallery</h2>
+    <div class="slider">
+      <div class="slider-images">
+        <div class="slide"><img src="./images/Discount!!.jfif" alt="Jordan 1"><div class="caption">Classic Red & White</div></div>
+        <div class="slide"><img src="./images/Air Jordan 1 mid Panda Black White.jfif" alt="Jordan 2"><div class="caption">Urban Black Edition</div></div>
+        <div class="slide"><img src="./images/shoe ideas.jfif" alt="Jordan 3"><div class="caption">Sky Blue Pack</div></div>
+      </div>
+    </div>
+    <div class="slider-buttons">
+      <button onclick="moveSlide(-1)">Prev</button>
+      <button onclick="moveSlide(1)">Next</button>
+    </div>
+  </section>
+
+  <section class="purchase-section">
+    <h2>Ready to Own It?</h2>
+    <p>Limited release. Secure your pair now.</p>
+    <button class="purchase-btn">Buy Now</button>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Jordan Brand. All rights reserved.</p>
+  </footer>
+
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to("header h1", { opacity: 1, y: -20, duration: 1, delay: 0.3 });
+    gsap.to("header p", { opacity: 1, y: -10, duration: 1, delay: 0.6 });
+
+    gsap.utils.toArray(".card").forEach((card, i) => {
+      gsap.to(card, {
+        scrollTrigger: {
+          trigger: card,
+          start: "top 85%",
+        },
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        delay: i * 0.2
+      });
+    });
+
+    gsap.to(".purchase-section", {
+      scrollTrigger: {
+        trigger: ".purchase-section",
+        start: "top 80%"
+      },
+      opacity: 1,
+      y: 0,
+      duration: 1.2
+    });
+
+    // Slider logic
+    let currentSlide = 0;
+    const slides = document.querySelectorAll(".slide");
+    const sliderImages = document.querySelector(".slider-images");
+
+    function moveSlide(step) {
+      currentSlide += step;
+      if (currentSlide < 0) currentSlide = slides.length - 1;
+      if (currentSlide >= slides.length) currentSlide = 0;
+      sliderImages.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+
+    // Auto-play
+    setInterval(() => moveSlide(1), 5000);
+
+    // Parallax effect
+    gsap.to(".slider-section", {
+      scrollTrigger: {
+        trigger: ".slider-section",
+        start: "top bottom",
+        scrub: true
+      },
+      backgroundPosition: "center 20%"
+    });
+  </script>
+</body>
+</html>
